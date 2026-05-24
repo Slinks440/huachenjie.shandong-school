@@ -1,1 +1,13 @@
+1. 核心设备标识 (Device Identifier)
+deviceId (设备ID): 代码中被硬编码为 "dc01dabdd5e861e3"。
 
+作用：服务端用来唯一识别一台手机的标识符。之前提到的“7天内不能登录”风控，就是基于这个字段进行封禁的。
+
+2. 硬件与系统信息 (Hardware & OS Info)
+modelName (手机型号): 固定为 "Xiaomi|22041211AC"（这是小米12 Pro天玑版的内部型号）。
+
+systemVersion (系统版本): 固定为 "13"（代表 Android 13 操作系统）。
+
+platform (平台类型): 固定为 "2"（通常在 APP 接口中，1 代表 iOS，2 代表 Android）。
+
+User-Agent (用户代理): 请求头中固定为 "ShanDong/8.6.0 (Redmi;Android 13)"，虽然型号写的是 Redmi，但同样是为了告诉服务端这是一台安卓手机。
